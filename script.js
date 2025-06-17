@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".container-2");
+  const textField = document.getElementById("textElement");
 
   // Button 1 – Hintergrundfarbe ändern
   document.getElementById("changeBgBtn").addEventListener("click", function () {
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("increaseFontBtn")
     .addEventListener("click", function () {
       if (container) {
-        container.style.fontSize = "1.5em";
+        container.style.fontSize = "1.8em";
       }
     });
 
@@ -38,4 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
         container.removeAttribute("style");
       }
     });
+
+  // Button 5 – text input
+  document.getElementById("textInput").addEventListener("click", function () {
+    if (container && textField) {
+      const inputField = document.getElementById("textInputField");
+      textField.textContent = inputField.value;
+      inputField.value = "";
+    }
+  });
 });
