@@ -15,24 +15,30 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("increaseFontBtn")
     .addEventListener("click", function () {
-      if (container) {
-        container.style.fontSize = "1.8em";
+      if (container.style.fontSize) {
+        container.style.fontSize = null;
+      }
+      else {
+        container.style.fontSize = "1.8em"
       }
     });
 
   // Button 3 – Rahmen ein-/ausblenden
-  document
-    .getElementById("toggleBorderBtn")
-    .addEventListener("click", function () {
-      if (container) {
-        if (container.style.border) {
-          container.style.border = "";
-        } else {
-          container.style.border = "4px solid rgb(149, 230, 125)";
-          container.style.borderadius = "24px";
-        }
+ document
+  .getElementById("toggleBorderBtn")
+  .addEventListener("click", function () {
+    const container = document.getElementById("container"); // ensure this exists
+    if (container) {
+      if (container.style.border) {
+        container.style.border = "";
+        container.style.borderRadius = "";
+      } else {
+        container.style.border = "4px solid rgb(149, 230, 125)";
+        container.style.borderRadius = "24px";
       }
-    });
+    }
+  });
+
 
   // Button 4 – Stil zurücksetzen
   document

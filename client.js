@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   socket.onmessage = function (event) {
     const msg = document.createElement("div");
-    msg.textContent = event.data;
+    msg.innerHTML = event.data;
     document.getElementById("chat-field").appendChild(msg);
   };
 
