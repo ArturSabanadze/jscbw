@@ -1,0 +1,7 @@
+let gaus = [1, 2, 3, 4, 5];
+
+const sum = gaus.reduce((accamulator, nextValue) => {
+  return accamulator + nextValue;
+}, 0 /* initial value of 0 */);
+
+console.log(sum);
