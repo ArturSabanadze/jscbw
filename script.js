@@ -43,12 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-  // Button 5 – text input
-  document.getElementById("textInput").addEventListener("click", function () {
-    if (container && textField) {
-      const inputField = document.getElementById("textInputField");
-      textField.textContent = `You:  ${inputField.value}`;
-      inputField.value = "";
-    }
-  });
+  
+  
 });
