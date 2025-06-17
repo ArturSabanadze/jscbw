@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".container-2");
-  const textField = document.getElementById("textElement");
+  const textField = document.getElementById("chat-field");
 
   // Button 1 – Hintergrundfarbe ändern
   document.getElementById("changeBgBtn").addEventListener("click", function () {
-    if (container) {
-      container.style.backgroundColor = "#dfe6e9";
+    if (container.style.backgroundColor) {
+      container.style.backgroundColor = null;
+    } else {
+      container.style.backgroundColor = "#224e83";
     }
   });
 
@@ -26,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (container.style.border) {
           container.style.border = "";
         } else {
-          container.style.border = "2px solid #2d3436";
+          container.style.border = "4px solid rgb(149, 230, 125)";
+          container.style.borderadius = "24px";
         }
       }
     });
@@ -44,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("textInput").addEventListener("click", function () {
     if (container && textField) {
       const inputField = document.getElementById("textInputField");
-      textField.textContent = inputField.value;
+      textField.textContent = `You:  ${inputField.value}`;
       inputField.value = "";
     }
   });

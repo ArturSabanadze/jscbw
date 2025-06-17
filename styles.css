@@ -1,21 +1,28 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: white;
+  color: #ffffff;
   font-size: 1.2rem;
+  background-color: #12131f;
 }
 
 .container-2 {
   position: relative;
-  background-color: #0d0b1f;
+  background-color: #0f1f33;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 50dvw;
+  min-width: 500px;
+  padding: 50px;
   height: 50vh;
   border-radius: 25px;
   z-index: 1;
@@ -30,10 +37,10 @@
   right: 0px;
   bottom: 0px;
   border-radius: 25px;
-  padding: 15px;
+  padding: 35px;
   background: linear-gradient(90deg, #ff6b81, #6c5ce7, #00cec9, #ff6b81);
   background-size: 300% 300%;
-  animation: animatedBorder 1s linear(0 0%, 0.6 40.44%) infinite;
+  animation: animatedBorder 3s linear(0 0%, 0.6 40.44%) infinite;
   z-index: 1;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -52,23 +59,17 @@
 }
 
 .btn {
-  font-family: "Arial", sans-serif;
-  background-color: #4caf50;
+  background-color: #135763;
   border: none;
-  color: white;
-  padding: 15px 32px;
+  color: rgb(247, 247, 247);
+  padding: 10px;
+  border-radius: 8px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
-  transition: opacity 3s;
 }
 .btn:hover {
-  background-color: #3e8e41;
-  transform: translateY(4px);
-  opacity: 0;
+  background-color: #1c8396;
 }
 
 .dom-buttons {
@@ -78,4 +79,30 @@
   width: 50dvw;
   align-items: flex-start;
   margin-bottom: 20px;
+}
+
+.input-field {
+  z-index: 2;
+  position: relative;
+  top: 0px;
+  margin-left: 15%;
+  align-items: center;
+}
+
+.input-field input {
+  width: 30dvw;
+  height: 3dvh;
+  font-size: 1.2rem;
+  min-width: 300px;
+}
+
+.chat-field {
+  background-color: #046e6d;
+  margin-top: 25px;
+  padding: 8px;
+  border-radius: 15px;
+  z-index: 3;
+
+  align-items: start;
+  min-width: 150px;
 }

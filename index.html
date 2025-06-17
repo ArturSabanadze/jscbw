@@ -6,37 +6,47 @@
     <title>DOM Manipulation Calculator</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="./script.js" defer></script>
+    <script src="client.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1>Welcome to My Web Page</h1>
+      <h1>CBW - HACKATHLON</h1>
 
       <div class="container-2">
-        <p id="textElement">Type in input field some text....</p>
-        <!-- something -->
+        <!--  Button 5 – text input -->
+        <div class="input-field">
+          <input id="textInputField" type="text" placeholder="Type something" />
+          <button class="btn" id="textInput" onclick="sendMessage()">
+            send
+          </button>
+        </div>
+        <!-- Chat -->
+        <div class="chat-field">
+          <p id="chat-field">You: ....</p>
+        </div>
       </div>
 
       <!-- DOM Manipulation Buttons -->
       <div class="dom-buttons">
-        <h2>Style Manipulation</h2>
+        <h2>Style Options</h2>
 
         <!-- Button 1 – Hintergrundfarbe ändern -->
-        <div><button id="changeBgBtn">Change Background Color</button></div>
+        <div>
+          <button class="btn" id="changeBgBtn">Change Background Color</button>
+        </div>
 
         <!--  Button 2 – Schriftgröße erhöhen -->
-        <div><button id="increaseFontBtn">Increase Font Size</button></div>
+        <div>
+          <button class="btn" id="increaseFontBtn">Increase Font Size</button>
+        </div>
 
         <!-- Button 3 – Rahmen ein-/ausblenden -->
-        <div><button id="toggleBorderBtn">Toggle Border</button></div>
+        <div>
+          <button class="btn" id="toggleBorderBtn">Toggle Border</button>
+        </div>
 
         <!-- Button 4 – Stil zurücksetzen -->
-        <div><button id="resetStyleBtn">Reset Styles</button></div>
-
-        <!--  Button 5 – text input -->
-        <div>
-          <input id="textInputField" type="text" />
-          <button id="textInput">senden</button>
-        </div>
+        <div><button class="btn" id="resetStyleBtn">Reset Styles</button></div>
       </div>
     </div>
   </body>
